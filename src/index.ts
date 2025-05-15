@@ -9,7 +9,7 @@ const app = new Hono()
 
 AppDataSource.initialize()
     .then(() => {
-        console.log('🗄️ Database connected')
+        console.log(' Database connected')
 
         app.get('/', (c) => c.text('URL Shortener API is running!'))
 
@@ -28,7 +28,7 @@ AppDataSource.initialize()
         })
 
         server.listen(3000, () => {
-            console.log('🚀 Server started on http://localhost:3000')
+            console.log(' Server started on http://localhost:3000')
         })
     })
     .catch((error) => {
